@@ -84,4 +84,5 @@ Response message:Non HTTP response message: Illegal character found in host: '/'
 错误解决办法IP地址后不跟参数  
 用户登录:一次性登录 设置全局token
 
-![测试图片](..\assets\images\1.png)
+![测试图片](https://jb-200.github.io/assets/images/1.png)
+assets\images\1.png
