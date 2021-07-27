@@ -7,13 +7,10 @@ tags:
   - jmeter
   - postman
 ---
-
-
-
 ## jmeter笔记
 
 ### 配置环境变量
-```txt
+```shell
 %JMETER_HOME%\lib\ext\ApacheJMeter_core.jar;%JMETER_HOME%\lib\jorphan.jar;%JMETER_HOME%\lib\logkit-2.0.jar;
 ```
 ### 常见错误
@@ -25,9 +22,16 @@ Response message:Non HTTP response message: Illegal character found in host: '/'
 
 ### 用户登录:一次性登录 设置全局token
 
-![测试图片](https://jb-200.github.io/assets/images/1.png)
-
-
+![jpg](https://github.com/jb-200/jb-200.github.io/assets/images/jmeter用户登录.jpg)
+```txt
+获取上一请求的值,在下一请求中使用
+```
 ## postman
 
+### 设置用户登录
+
+```txt
+在Headers设置Cookie token
+```
+![png](https://github.com/jb-200/jb-200.github.io/assets/images/postman_ct.png)
 
