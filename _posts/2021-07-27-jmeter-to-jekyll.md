@@ -22,10 +22,10 @@ Response message:Non HTTP response message: Illegal character found in host: '/'
 
 ### 用户登录:一次性登录 设置全局token
 
-![jpg](https://github.com/jb-200/jb-200.github.io/assets/images/jmeter用户登录.jpg)
+![jpg](/assets/images/jmeter用户登录.jpg)
 ```txt
 获取上一请求的值,在下一请求中使用
-```
+```  
 ## postman
 
 ### 设置用户登录
@@ -33,5 +33,5 @@ Response message:Non HTTP response message: Illegal character found in host: '/'
 ```txt
 在Headers设置Cookie token
 ```
-![png](https://github.com/jb-200/jb-200.github.io/assets/images/postman_ct.png)
+![png](/assets/images/postman_ct.png)
 
