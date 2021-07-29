@@ -23,6 +23,8 @@ git checkout # 切换分支
 Git branch -vv # 查看分支的所有状态
 git merge # 合并分支
 Git branch -d # 删除
+git init --bare #服务器创建可上传库
+git clone tx:/“路径” #克隆服务器库
 ```
 
 来自 [git官网](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA)
