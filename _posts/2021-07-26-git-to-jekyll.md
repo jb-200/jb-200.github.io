@@ -25,6 +25,7 @@ git merge # 合并分支
 Git branch -d # 删除
 git init --bare #服务器创建可上传库
 git clone tx:/“路径” #克隆服务器库
+注意：服务器上bare仓库不能直接查看必须clone才能查看
 ```
 
 来自 [git官网](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA)
