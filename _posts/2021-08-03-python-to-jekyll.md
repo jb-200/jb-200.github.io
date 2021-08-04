@@ -7,6 +7,8 @@ tags:
   - notes
   - notes
 ---
+
+
 Json模块提供了四个功能：dumps、dump、loads、load
 json.dumps(): 对json进行编码，把数据类型转换成字符串。
 json.dump():对json进行编码， 把数据类型转换成字符串，并存储在文件中。
@@ -19,6 +21,8 @@ pickle.dump(obj, file[, protocol])
 pickle.load(file)
 　　反序列化对象。将文件中的数据解析为一个Python对象。
 cell()
-????????????????
+固定的行跟列
 strip()
 返回字符串的剪裁版本
+
+
