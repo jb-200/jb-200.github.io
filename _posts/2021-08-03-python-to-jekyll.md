@@ -8,6 +8,8 @@ tags:
   - notes
 ---
 
+```bash
+
 
 Json模块提供了四个功能：dumps、dump、loads、load
 json.dumps(): 对json进行编码，把数据类型转换成字符串。
@@ -24,5 +26,6 @@ cell()
 固定的行跟列
 strip()
 返回字符串的剪裁版本
+```
 
 
