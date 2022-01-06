@@ -1,5 +1,5 @@
 ---
-title: "biji"
+title: "biji-postman"
 date: 2022-01-05T15:34:30-04:00
 categories:
   - postman
@@ -18,14 +18,20 @@ tags:
 2. 【cookie存在客户端  sessionid存在服务器的内容   token  存在服务器数据库】
 
 # 开发API“项目端口”“；例子：8111/yyc/doc.html”
-### ?Postman   tests断言    状态断言  业务断言
+### Postman_tests断言    状态断言  业务断言
 
-1. 
-2. 通过发送不完整数据/不正确参数来验证API的错误处理
-3. 
+1. Status code is 200 【状态码200】 
+2. Response body Contanis string 断言返还结果包含字符串
+3. Response body Json value check 对返还的json数据做检查
+4. Response body is equat to a string 结果等于一个字符串
+5. Response headers Content-Type header check 响应头里包含Content-type
+6. Response time is less than 200ms
+通过发送不完整数据/不正确参数来验证API的错误处理
 参考 [postman官网文档](https://learning.postman.com/docs/writing-scripts/test-scripts/)
 
-#### ！待提高！网页中存在验证码如何使用临时登录token测接口？ Params 里设置从浏览器F12拿到的临时token的value值 
+#### ！待提高！
+1. 网页中实时加载的验证码如何，没有找到有用的解决方案
+2. 
 
 ## get、post请求区别？
 1. get是通过网址？来传递参数的。不安全，主要是为了获取数据
@@ -37,9 +43,9 @@ tags:
 3. binary 二进制文件
 
 ## 数据参数化
-timetamp
-random
-uid
+{{$timetamp}}
+{{$random}}
+{{$uid}}
 ## 全局变量如何设置/上一个接口的参数如何拿到？
 1. json提取器
 取 var data = JSON.parse(responseBody)
@@ -53,8 +59,18 @@ data2[0].id
 取  responseBody.match(new RegExp('"msg":"(.+?)",'))
 设置成全局 pm.globals.set()
 用{{msg}}
-3. cookie提取器
+3. cookie提取器【实际测试不会使用】
+postman.getResponseCookie
 
-
-
-
+## token时效测试（需要逐步完善）
+1. 登录后响应json里的expires_in（单位秒）
+2. 一些登录返回接口并没有expires参数，所以如何测试程序登录后的在线时长
+### 问答
+1. 确认环境，排除其他因素，对应需求危害，如果不是特别等级很高的后期在跟进
+2. 复现率低的BUG，最初记录它的时候详细描述，出现位置截图操作过程进行记录，不易复现备注，多轮回归测试进行复现，后期跟开发一起复现
+3. 新项目测试：了解项目需求原型、业务逻辑、场景、设备是否跨平台、稳定性等、出计划、拿到测试地址根据测试计划用例，及时跟进需求变更，及时跟开发沟通问题，跟进问题，回归测试，及时汇报测试结果  测试报告
+4. 了解现状/产品业务
+5. cookie是浏览器缓存kv方式保存方便下一次访问使用
+6. session是会话临时存在服务器里
+7. token是用户标识访问授权，减少访问数据库对比账号密码次数
+8. postman可设置环境、全局函数![jpg](/assets/images/postman环境.png)
