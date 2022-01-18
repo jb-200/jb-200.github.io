@@ -17,7 +17,7 @@ tags:
 1. 都是服务器生成的
 2. 【cookie存在客户端  sessionid存在服务器的内容   token  存在服务器数据库】
 
-# 开发API“项目端口”“；例子：8111/yyc/doc.html”
+### 开发API“项目端口”“；例子：8111/yyc/doc.html”
 ### Postman_tests断言    状态断言  业务断言
 
 1. Status code is 200 【状态码200】 
@@ -74,3 +74,18 @@ postman.getResponseCookie
 6. session是会话临时存在服务器里
 7. token是用户标识访问授权，减少访问数据库对比账号密码次数
 8. postman可设置环境、全局函数![jpg](/assets/images/postman环境.png)
+9. 打包？
+## Newman集成jenkins
+1. 安装nodejs
+2. 安装Newman
+3. 安装Jenkins
+4. 启动Jenkins http://localhost:8083(可使用安装时添加的端口)  
+5. 解锁Jenkins （解锁钥匙在）
+6. 创建命令运行postman脚本文件
+7. 在结点配置nodejs和nmp的环境变量
+```bash
+"生成报告的插件"
+npm install -g newman-reporter-html
+"例如运行语句"
+newman run "D:\J\渔业村.postman_collection.json" -g "D:\J\workspace.postman_globals.json" -e "D:\J\workspace.postman_globals.json" -r cli,html,json,junit --reporter-html-export "D:\j\report001.html"
+```
