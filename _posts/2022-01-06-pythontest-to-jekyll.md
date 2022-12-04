@@ -1,6 +1,6 @@
 ---
 title: "biji-Linux"
-date: 2022-01-06T15:34:30-04:00
+date: 2022-01-01T15:34:30-04:00
 categories:
   - test
 tags:

@@ -26,9 +26,28 @@ Git branch -d # 删除
 git init --bare #服务器创建可上传库
 git clone tx:/“路径” #克隆服务器库
 注意：服务器上bare仓库不能直接查看必须clone才能查看
+
+git设置缩写命令
+.gitconfig
+[alias]
+        co = checkout
+        br = branch
+        ci = commit
+        st = status -s
+        tree = log --oneline --all --graph
+        treeb = log --oneline --graph --branches
+        treet = log --oneline --graph --tags
+        diffc = diff --cached
+        mg = merge
+        mgg = merge -
+        coo = checkout -
+        amend = commit --amend --reuse-message=HEAD
+
+code
 ```
 
 来自 [git官网](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA)
+
 
 ## 测试笔记
 
