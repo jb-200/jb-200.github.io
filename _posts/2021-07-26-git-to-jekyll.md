@@ -48,53 +48,37 @@ code
 
 来自 [git官网](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA)
 
+### git代码链接个人服务器
+```txt
+注意:查看个人服务器备份学习代码是否已上传???
+```
+### ssh登录相关
+***
+命令行工具推荐 Windows PowerShell   快捷键win+r   wt
+服务器链接快捷工具推荐：PuTTY
+ssh root@12.12.12    链接服务器
 
-## 测试笔记
+ssh免密登录配置
+pwd 查看当前目录
+ssh-keygen  生成密匙
+ssh 127.0.0.1
+将公钥上传    
+方法1，scp拷贝到服务器追加到.ssh/aythorized_keys       scp -P跟密码或者跟 -f .ssh/id_rsa.pub root@11111/home/.ssh (-P port  指定ssh端口)
+方法2 cat ~/.ssh/id_rsa.pub   复制本地公钥
+.ssh/authorized_keys    
+ssh免密登录 - 跨越&尘世 - 博客园 (cnblogs.com)
+注意：
+chmod
+.ssh 目录权限是700    文件authorized_keys私钥的权限是600
+C：/用户/.ssh/下存储私钥
+config文件配置快捷链接名称
+***
+
+## Git相关问题
 
 1. 数据库，表格形成乘积的大表，先筛选最大程度减少数据
 2. 数据库 表外键以ID存储内存占用小
 3. Git版本回退，版本控制，查看每次存储之间的变化
 4. 测试注意界面表单分页数据
-
-## python笔记
-
-1. Webdriver   启动器  下载并且防止启动器的位置：  放置到python的主目录下
-2. 错误提示：“ssion not created: This version of ChromeDriver only supports Chrome version 88”webdriver 启动器版本需要下载最新版本/浏览器需要降级
-3. 新窗口 跳转元素定位 窗口
-
-```python
-switch_to.window(browser.window_handles[1]) # 窗口从 0 开始计数
-```
-
-4. 元素定位:
-
-```python
-input[@class='el-input__inner'])[2]
-```
-5. select元素下拉框
-
-```python
-Select() # 实例化Select
-.select_by_index(1)  # 选择第二项选项：o1
-.select_by_value("o2")  # 选择value="o2"的项
-.select_by_visible_text("o3")  # 选择text="o3"的值，即在下拉时我们可以看到的文本
-```
-6. 非select下拉框
-
-下拉直接点击选择定位的元素
-
-7. 解决**element not interactable**交互报错
-本地Jenkins端口号 8088
-
-```txt
-C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\secrets\initialAdminPassword
-```
-
-8. Iframe 内部元素获取
-
-```python
-driver.switch_to.frame(id)/name # 有唯一的id/name
-```
-
 
 

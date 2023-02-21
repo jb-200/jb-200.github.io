@@ -7,6 +7,23 @@ tags:
   - 基础
   - 图片
 ---
+# Automation Test- master测试框架
+1. 问题:(暂时未解决报错)
+```python
+// pip3 install -r requirements.txt产生
+ERROR: Could not find a version that satisfies the requirement opencv-python==4.2.0.32
+```
+2. 内网: 
+```python
+// pip install pgmagick产生
+reparing metadata (setup.py) ... error
+  error: subprocess-exited-with-erro
+```
+
+
+
+
+
 ### 什么是http协议？
 
 1. 客户端和服务器传输数据的一种方式
